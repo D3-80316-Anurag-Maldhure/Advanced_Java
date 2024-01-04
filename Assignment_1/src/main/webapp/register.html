@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Movie App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('images/b.jpg') center/cover no-repeat fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        main form {
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #e50914;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #bf0813;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        button.clicked {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mooview Sign Up</h1>
+    <p>Movie बद्दल सर्वकाही :  One stop for all movie reviews!</p>
+    <h3>Join the growing moovie community today</h3>
+</header>
+
+<main>
+    <form method="post" action="signup">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" required>
+
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+
+        <label for="passwd">Password:</label>
+        <input type="password" id="passwd" name="passwd" required>
+
+        <button id="signupButton" type="submit" value="SignUp">Sign Up</button>
+        <br/><br/>
+        <a href="index.html">Go back to Login Page</a>
+    </form>
+</main>
+
+<footer>
+    <p>Movie Review App Developed by @nurag</p>
+</footer>
+
+<script>
+    document.getElementById('signupButton').addEventListener('click', function() {
+        this.classList.add('clicked');
+        setTimeout(() => {
+            this.classList.remove('clicked');
+        }, 300);
+    });
+</script>
+
+</body>
+</html>
